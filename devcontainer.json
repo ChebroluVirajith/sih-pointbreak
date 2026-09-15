@@ -1,0 +1,24 @@
+{
+  "name": "GovConnect Interoperability Platform",
+  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "features": {
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3.10"
+    },
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
+    }
+  },
+  "forwardPorts": [5173, 8000],
+  "portsAttributes": {
+    "5173": {
+      "label": "Frontend Portal",
+      "onAutoForward": "openBrowser"
+    },
+    "8000": {
+      "label": "FastAPI Backend & Swagger",
+      "onAutoForward": "silent"
+    }
+  },
+  "postCreateCommand": "pip install -r backend/requirements.txt && cd frontend && npm install"
+}

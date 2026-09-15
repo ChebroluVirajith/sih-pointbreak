@@ -1,4 +1,5 @@
-const API_BASE = 'http://localhost:8000/api/v1';
+// Uses relative path through Vite proxy, ensuring seamless operation across Localhost & GitHub Codespaces
+const API_BASE = '/api/v1';
 
 export const api = {
   // Auth
