@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#fafafa] text-slate-900;
+  }
+}
+
+/* Minimalist clean card classes */
+.clean-card {
+  @apply bg-white border border-slate-200/80 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.05)];
+}
+
+.clean-card-hover {
+  @apply bg-white border border-slate-200/80 rounded-xl shadow-[0_1px_3px_rgba(0,0,0,0.05)] hover:border-red-300 hover:shadow-[0_4px_12px_rgba(220,38,38,0.06)] transition-all;
+}
+
+.badge-red {
+  @apply bg-red-50 text-red-700 border border-red-200/80 font-medium;
+}
+
+.badge-neutral {
+  @apply bg-slate-100 text-slate-700 border border-slate-200 font-medium;
+}
+
+/* Custom minimal scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
